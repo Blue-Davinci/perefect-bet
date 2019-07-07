@@ -1,0 +1,28 @@
+result_tables = {'Betika Results': betika_df, 'Betpawa Results': betpawa_df, 'Betway Results': betway_df,
+                     'Dafabet Results': dafabet_df, 'Mcheza Results': mcheza_df, 'SportPesa Results': sportpesa_df}
+    perfect_bets = []
+    web_sites = {}
+    for key,table in result_tables.items():  #get each table in our dictionary
+        if not table.empty: #if the table is not empty
+            for teams in table['Team1']:  # get each team in our current table
+                first_team_odd = table.loc[table['Team1'] == teams, 'Team1odd'].astype(float)  # get the team's odd
+                for seckey, other_tables in result_tables.items():  # get other tables for comparisons
+                    if seckey != key :  # if this is not our current table
+                        if not other_tables.empty: #table is not empty
+                            for other_teams in other_tables['Team1']:
+                                if other_teams == teams:
+                                    second_team_name = other_tables[other_tables['Team1'] == other_teams]['Team2'].values[0]
+                                    second_team_odd = float(other_tables[other_tables['Team1'] == other_teams]['Team2Odd'].
+                                        values[0])  # get the team's odd
+                                    # print(other_teams, " === ", second_team_name, " ===== ",seckey, " ===== ", key, " == ",
+                                    # second_team_odd)
+                                    total = (1 / first_team_odd * 100) + (1 / second_team_odd * 100)
+                                    try:
+                                        if total < 100:
+                                            if key not in web_sites.keys():
+                                                web_sites[key] = []
+                                            statement = '!=> %s in %s has a perfect bet with %s in %s Having a total of %f' % \
+                                                        (teams, key, second_team_name, seckey, total)
+                                            perfect_bets.append([statement])
+                                    except TypeError:
+                                        print("Conversion Error.")
