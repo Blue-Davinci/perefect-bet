@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from selenium import  webdriver
 
-file = "C:\\Users\\Blue_Davinci\\Downloads\\Sites\\mCHEZA1.html"
+file = "C:\\Users\\user\\Downloads\\Sites\\mCHEZA1.html"
 #req = requests.get('https://www.mcheza.co.ke/sports')
 soup = ''
 with open(file,'rb') as fp:

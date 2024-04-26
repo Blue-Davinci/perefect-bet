@@ -8,7 +8,7 @@ from selenium.common.exceptions import TimeoutException
 
 class Mcheza_Scraper(object):
     def __init__(self):
-        self.file = "C:\\Users\\Blue_Davinci\\Downloads\\Sites\\mCHEZA1.html"
+        self.file = "samplefile.html"
         self.soup = ""
         self.read_file()
         self.team1Names = []

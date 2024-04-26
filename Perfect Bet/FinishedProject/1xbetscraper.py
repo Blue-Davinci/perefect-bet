@@ -10,7 +10,7 @@ from selenium.common.exceptions import TimeoutException
 class onexbet(object):
 
     def __init__(self):
-        self.file = "C:\\Users\\Blue_Davinci\\Downloads\\Sites\\1XBET.COM Betting Company. Online sports betting _ 1XBET.COM Betting Company.html"
+        self.file = "C:\\Users\\user\\Downloads\\Sites\\1XBET.COM Betting Company. Online sports betting _ 1XBET.COM Betting Company.html"
         self.soup = self.read_file()
         self.first_table = self.soup.find_all("div", {"storagename": "live_main"})
         self.second_table = self.soup.find_all("div", {"storagename": "line"})

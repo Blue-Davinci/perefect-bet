@@ -10,7 +10,7 @@ from selenium.common.exceptions import TimeoutException
 class SportPesa(object):
 
     def __init__(self):
-        self.fileToRead = 'C:\\Users\\Blue_Davinci\\Downloads\\Sites\\Sportpesa __ Get in the Game.html'
+        self.fileToRead = 'C:\\Users\\user\\Downloads\\Sites\\Sportpesa __ Get in the Game.html'
         self.specifics = []
         self.team1 = {}
         self.draws = []

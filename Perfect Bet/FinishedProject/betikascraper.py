@@ -5,7 +5,7 @@ import pandas as pd
 
 class Betika_Scraper(object):
     def __init__(self):
-        self.file = "C:\\Users\\Blue_Davinci\\Downloads\\Sites\\Betika - The #1 Online & SMS sports Betting Website In Kenya.html"
+        self.file = "C:\\Users\\user\\Downloads\\Sites\\Betika - The #1 Online & SMS sports Betting Website In Kenya.html"
         self.soup = ""
         self.read_file()
         self.team1pack = []

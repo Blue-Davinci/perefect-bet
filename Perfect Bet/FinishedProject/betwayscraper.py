@@ -5,7 +5,7 @@ import pandas as pd
 
 class BetWay_Scraper(object):
     def __init__(self):
-        self.file = "C:\\Users\\Blue_Davinci\\Downloads\\Sites\\Sports betting on Betway.co.ke _ Best online betting odds in Kenya.html"
+        self.file = "C:\\Users\\user\\Downloads\\Sites\\Sports betting on Betway.co.ke _ Best online betting odds in Kenya.html"
         self.soup = ""
         self.read_file()
         self.team1Names = []

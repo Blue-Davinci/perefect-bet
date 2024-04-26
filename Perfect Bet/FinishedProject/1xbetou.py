@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 
-file = "C:\\Users\\Blue_Davinci\\Downloads\\Sites\\Fixed-odds sports betting _ 1XBET.COM Betting Company.html"
+file = "C:\\Users\\user\\Downloads\\Sites\\Fixed-odds sports betting _ 1XBET.COM Betting Company.html"
 
 class OneBet_Scraper(object):
     def __init__(self):
@@ -21,7 +21,7 @@ class OneBet_Scraper(object):
         self.events = self.soup.find_all('div', {'class': 'bp-events upcomingmatches'})
 
     def read_file(self):
-        url = "C:\\Users\\Blue_Davinci\\Downloads\\Sites\\S1XBET - Bets & Betting tips ᐉ Online sports betting odds ᐉ 1xbet.co.ke"
+        url = "C:\\Users\\user\\Downloads\\Sites\\S1XBET - Bets & Betting tips ᐉ Online sports betting odds ᐉ 1xbet.co.ke"
             #"https://www.sportpesa.com/?sportId=1"
         browser = webdriver.Chrome()
         browser.get(url)

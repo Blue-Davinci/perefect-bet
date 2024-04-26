@@ -10,7 +10,7 @@ from selenium.common.exceptions import TimeoutException
 class Betpawa_Scraper(object):
 
     def __init__(self):
-        self.file = "C:\\Users\\Blue_Davinci\\Downloads\\Sites\\Upcoming betting events Betpawa.html"
+        self.file = "C:\\Users\\user\\Downloads\\Sites\\Upcoming betting events Betpawa.html"
         self.soup = ""
         self.read_file()
         self.team1Names = []
